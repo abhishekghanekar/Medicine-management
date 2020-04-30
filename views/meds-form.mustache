@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical App</title>
+    <style>
+        input{
+            display:block;
+            margin:0.8rem;
+            padding:0.8rem;
+        }
+        input[type=submit]{
+            background:blue;
+            color:white;
+            cursor:pointer;
+            border-radius:10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Add Medicine</h1>
+    <form action="/meds/add" method="POST">
+    <input type="text" placeholder="Medicine name" name="name">
+    <input type="number" placeholder="Count" name="count">
+    <input type="text" placeholder="Medicine brand" name="brand">
+    <input type="submit" value="Add">
+    <a href="/dashboard" class="btn btn-secondary">Back to dashboard</a>
+
+    </form>
+
+</body>
+
+</html>

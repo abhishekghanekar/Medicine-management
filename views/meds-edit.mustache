@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical App</title>
+</head>
+
+<body>
+    <h1>Form</h1>
+    <form action="/meds/edit/{{med.mid}}" method="POST">
+    <input type="text" placeholder="Medicine name" name="name" value="{{med.name}}">
+    <input type="number" placeholder="Count" name="count" value="{{med.count}}">
+    <input type="text" placeholder="Medicine brand" name="brand" value="{{med.brand}}">
+    <input type="submit" value="Update">
+
+    </form>
+
+</body>
+
+</html>

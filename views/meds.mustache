@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Latest compiled and minified CSS Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical App</title>
+</head>
+
+<body>
+<div class="container">
+    
+    <h1 style="text-align:center;">List of Medicines</h1>
+
+    <table class="table table-hover">
+    <thead class="thead-dark">
+    <tr>
+    <th scope="col">ID</th>
+    <th scope="col">NAME</th>
+    <th scope="col">BRAND</th>
+    <th scope="col">COUNT</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    {{#rows}}
+        <tr>
+        <th scope="row">{{mid}}</th>
+        <td>{{name}}</td>
+        <td>{{brand}}</td>
+        <td>{{count}}</td>
+        <td>
+        <form action="meds/edit/{{mid}}" method="GET">
+        <button class="btn btn-info" type="submit">Update</button>
+        </form>
+        </td>
+        <td>
+        <form action="meds/delete/{{mid}}" method="POST">
+        <button class="btn btn-danger" type="submit">Delete</button>
+        </form>
+        </td>
+        
+        </tr>
+    {{/rows}}
+
+    </tbody>
+    </table>
+    <a href="/dashboard" class="btn btn-secondary">Back to dashboard</a>
+    </div>
+</body>
+
+</html>
